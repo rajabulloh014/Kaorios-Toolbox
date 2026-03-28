@@ -1,2 +1,2 @@
-Keybox Soft-banned
-Strong: ❌
+Keybox OK
+Strong: ✅
