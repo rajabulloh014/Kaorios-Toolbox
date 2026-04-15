@@ -1,2 +1,4 @@
-Keybox OK
-Strong: ✅
+Keybox Revoked
+BASIC:  ❌
+DEVICE: ❌
+STRONG: ❌
