@@ -6,28 +6,55 @@ This guide explains the smali changes needed to import and use the Kaorios Toolb
 
 Import the KaoriosToolbox DEX classes into `Framework.jar`.
 
-### 1) `Landroid/app/Application;`
-
-**Method:** `attach(Landroid/content/Context;)V`
-
-Add the following line immediately after:
-
+### 1) 
+**Class:**
 ```smali
-invoke-virtual {p0, p1}, Landroid/app/Application;->attachBaseContext(Landroid/content/Context;)V
+Landroid/app/Instrumentation;
+```
+
+**Method:**
+```smali
+ newApplication(Ljava/lang/Class;Landroid/content/Context;)Landroid/app/Application;
+```
+
+Add the following line immediately before
+```smali
+return-object xY
+    .end method
 ```
 
 ```smali
 invoke-static {p1}, Landroid/security/kaorios/KaoriosHook;->initContext(Landroid/content/Context;)V
 ```
 
+**Method:**
+```smali
+ newApplication(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Context;)Landroid/app/Application;
+```
+
+Add the following line immediately before
+```smali
+return-object xY
+    .end method
+```
+
+```smali
+invoke-static {p3}, Landroid/security/kaorios/KaoriosHook;->initContext(Landroid/content/Context;)V
+```
 ---
 
-### 2) `Landroid/app/ApplicationPackageManager;`
+### 2)
+**Class:**
+```smali
+Landroid/app/ApplicationPackageManager;
+```
 
-**Method:** `hasSystemFeature(Ljava/lang/String;I)Z`
+**Method:** 
+```smali
+ hasSystemFeature(Ljava/lang/String;I)Z
+```
 
 Add the following code below `.registers X`:
-
 ```smali
 invoke-static {p1, p2}, Landroid/security/kaorios/KaoriosHook;->hasSystemFeature(Ljava/lang/String;I)Ljava/lang/Boolean;
 move-result-object v0
@@ -42,12 +69,18 @@ return v0
 
 ---
 
-### 3) `Landroid/security/keystore2/AndroidKeyStoreKeyPairGeneratorSpi;`
+### 3)
+**Class:**
+```smali
+Landroid/security/keystore2/AndroidKeyStoreKeyPairGeneratorSpi;
+```
 
-**Method:** `generateKeyPair()Ljava/security/KeyPair;`
+**Method:**
+```smali
+ generateKeyPair()Ljava/security/KeyPair;
+```
 
 Add the following code below `.registers X`:
-
 ```smali
 invoke-static {p0}, Landroid/security/kaorios/KaoriosHook;->initGenerateSoftwareKeyPair(Ljava/lang/Object;)Ljava/security/KeyPair;
 move-result-object vX
@@ -73,9 +106,16 @@ Example:
 
 ---
 
-### 4) `Landroid/security/keystore2/AndroidKeyStoreSpi;`
+### 4)
+**Class:**
+```smali
+Landroid/security/keystore2/AndroidKeyStoreSpi;
+```
 
-**Method:** `engineGetCertificateChain(Ljava/lang/String;)[Ljava/security/cert/Certificate;`
+**Method:**
+```smali
+ engineGetCertificateChain(Ljava/lang/String;)[Ljava/security/cert/Certificate;
+```
 
 Find this part:
 
@@ -86,7 +126,6 @@ return-object vD
 ```
 
 Add the following code below:
-
 ```smali
 const/4 vA, 0x0
 aput-object vB, vC, vA
@@ -117,12 +156,18 @@ return-object v3
 
 ## Services.jar
 
-### 1) `Lcom/android/server/SystemServer;`
+### 1)
+**Class:**
+```smali
+Lcom/android/server/SystemServer;
+```
 
-**Method:** `run()V`
+**Method:** 
+```smali
+ run()V
+```
 
 Add the following line before:
-
 ```smali
 Lcom/android/server/SystemServer;->startOtherServices(Lcom/android/server/utils/TimingsTraceAndSlog;)V
 ```
@@ -147,7 +192,7 @@ This makes it easier to track which register is used as input, output, or tempor
 
 ## Summary
 
-- `Framework.jar`: hook `Application`, `ApplicationPackageManager`, and `keystore2`
+- `Framework.jar`: hook `Instrumentation`, `ApplicationPackageManager`, and `AndroidKeyStoreKeyPairGeneratorSpi`
 - `Services.jar`: hook `SystemServer`
 - Adjust register counts carefully when adding new instructions
 - Keep register usage consistent inside each method
