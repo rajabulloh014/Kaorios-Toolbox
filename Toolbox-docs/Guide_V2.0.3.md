@@ -17,7 +17,7 @@ Landroid/app/Instrumentation;
  newApplication(Ljava/lang/Class;Landroid/content/Context;)Landroid/app/Application;
 ```
 
-the following line immediately before
+before line
 ```smali
 return-object xY
     .end method
@@ -33,7 +33,7 @@ invoke-static {p1}, Landroid/security/kaorios/KaoriosHook;->initContext(Landroid
  newApplication(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Context;)Landroid/app/Application;
 ```
 
-the following line immediately before
+before line
 ```smali
 return-object xY
     .end method
@@ -127,7 +127,7 @@ aput-object vB, vC, vA
 return-object vD
 ```
 
-The following code below:
+below line
 ```smali
 const/4 vA, 0x0
 aput-object vB, vC, vA
@@ -172,7 +172,7 @@ Lcom/android/server/SystemServer;
  run()V
 ```
 
-the following line before:
+before line
 ```smali
 Lcom/android/server/SystemServer;->startOtherServices(Lcom/android/server/utils/TimingsTraceAndSlog;)V
 ```
