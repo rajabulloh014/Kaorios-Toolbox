@@ -1,4 +1,4 @@
 Keybox OK
-BASIC:  ✅
-DEVICE: ✅
-STRONG: ✅
+BASIC:  ❌
+DEVICE: ❌
+STRONG: ❌
