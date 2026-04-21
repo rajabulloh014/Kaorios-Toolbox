@@ -54,3 +54,4 @@ Help us translate Kaorios-Toolbox into your language! 🌐
 
 - **Payload Dumper** — [rcmiku](https://github.com/rcmiku/Payload-Dumper-Compose).
 - **AOSP Framework**
+- **Trickystore**

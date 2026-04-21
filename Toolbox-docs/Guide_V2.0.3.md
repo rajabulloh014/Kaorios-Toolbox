@@ -17,12 +17,13 @@ Landroid/app/Instrumentation;
  newApplication(Ljava/lang/Class;Landroid/content/Context;)Landroid/app/Application;
 ```
 
-Add the following line immediately before
+before line
 ```smali
 return-object xY
     .end method
 ```
 
+Add
 ```smali
 invoke-static {p1}, Landroid/security/kaorios/KaoriosHook;->initContext(Landroid/content/Context;)V
 ```
@@ -32,12 +33,13 @@ invoke-static {p1}, Landroid/security/kaorios/KaoriosHook;->initContext(Landroid
  newApplication(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Context;)Landroid/app/Application;
 ```
 
-Add the following line immediately before
+before line
 ```smali
 return-object xY
     .end method
 ```
 
+add
 ```smali
 invoke-static {p3}, Landroid/security/kaorios/KaoriosHook;->initContext(Landroid/content/Context;)V
 ```
@@ -125,11 +127,14 @@ aput-object vB, vC, vA
 return-object vD
 ```
 
-Add the following code below:
+below line
 ```smali
 const/4 vA, 0x0
 aput-object vB, vC, vA
+```
 
+add:
+```smali
 invoke-static {vC}, Landroid/security/kaorios/KaoriosHook;->CertificateChainIfNeeded([Ljava/security/cert/Certificate;)[Ljava/security/cert/Certificate;
 move-result-object vD
 ```
@@ -167,11 +172,12 @@ Lcom/android/server/SystemServer;
  run()V
 ```
 
-Add the following line before:
+before line
 ```smali
 Lcom/android/server/SystemServer;->startOtherServices(Lcom/android/server/utils/TimingsTraceAndSlog;)V
 ```
 
+add
 ```smali
 invoke-static {}, Landroid/security/kaorios/KaoriosHook;->initSystemServer()V
 ```
