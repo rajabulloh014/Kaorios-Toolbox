@@ -1,4 +1,4 @@
-Keybox OK
+Keybox Revoked
 BASIC:  ❌
 DEVICE: ❌
 STRONG: ❌
