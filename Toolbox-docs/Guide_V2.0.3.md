@@ -167,11 +167,6 @@ return-object v3
 Lcom/android/server/SystemServer;
 ```
 
-**Method:** 
-```smali
- run()V
-```
-
 before line
 ```smali
 Lcom/android/server/SystemServer;->startOtherServices(Lcom/android/server/utils/TimingsTraceAndSlog;)V
