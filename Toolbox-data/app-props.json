@@ -9,11 +9,6 @@
     "MANUFACTURER": "realme",
     "MODEL": "RMX5101"
   },
-  "com.coolapk.market": {
-    "MANUFACTURER": "Nothing",
-    "BRAND": "Nothing",
-    "MODEL": "A024"
-  },
   "com.dts.freefiremax": {
     "MANUFACTURER": "realme",
     "MODEL": "RMX5070"
@@ -95,60 +90,6 @@
     "MODEL": "RMX5101"
   },
   "com.garena.game.kgvntest": {
-    "BRAND": "realme",
-    "DEVICE": "Realme 15 Pro 5G",
-    "MANUFACTURER": "realme",
-    "MODEL": "RMX5101"
-  },
-  "com.garena.game.kgms": {
-    "BRAND": "realme",
-    "DEVICE": "Realme 15 Pro 5G",
-    "MANUFACTURER": "realme",
-    "MODEL": "RMX5101"
-  },
-  "com.garena.game.kgph": {
-    "BRAND": "realme",
-    "DEVICE": "Realme 15 Pro 5G",
-    "MANUFACTURER": "realme",
-    "MODEL": "RMX5101"
-  },
-  "com.garena.game.kgth": {
-    "BRAND": "realme",
-    "DEVICE": "Realme 15 Pro 5G",
-    "MANUFACTURER": "realme",
-    "MODEL": "RMX5101"
-  },
-  "com.garena.game.kgtw": {
-    "BRAND": "realme",
-    "DEVICE": "Realme 15 Pro 5G",
-    "MANUFACTURER": "realme",
-    "MODEL": "RMX5101"
-  },
-  "com.garena.game.kgvn": {
-    "BRAND": "realme",
-    "DEVICE": "Realme 15 Pro 5G",
-    "MANUFACTURER": "realme",
-    "MODEL": "RMX5101"
-  },
-  "com.garena.game.kgvntest": {
-    "BRAND": "realme",
-    "DEVICE": "Realme 15 Pro 5G",
-    "MANUFACTURER": "realme",
-    "MODEL": "RMX5101"
-  },
-  "com.garena.game.kgph": {
-    "BRAND": "realme",
-    "DEVICE": "Realme 15 Pro 5G",
-    "MANUFACTURER": "realme",
-    "MODEL": "RMX5101"
-  },
-  "com.garena.game.kgth": {
-    "BRAND": "realme",
-    "DEVICE": "Realme 15 Pro 5G",
-    "MANUFACTURER": "realme",
-    "MODEL": "RMX5101"
-  },
-  "com.garena.game.kgms": {
     "BRAND": "realme",
     "DEVICE": "Realme 15 Pro 5G",
     "MANUFACTURER": "realme",
@@ -297,10 +238,6 @@
     "PRODUCT": "NX769J",
     "FINGERPRINT": "nubia/NX769J/NX769J:14/UKQ1.230917.001/20240813.173312:user/release-keys"
   },
-  "com.supercell.clashofclans": {
-    "MANUFACTURER": "Xiaomi",
-    "MODEL": "2107113SI"
-  },
   "com.tencent.aovindia": {
     "BRAND": "realme",
     "DEVICE": "Realme 15 Pro 5G",
@@ -350,11 +287,6 @@
     "DEVICE": "Realme 15 Pro 5G",
     "MANUFACTURER": "realme",
     "MODEL": "RMX5101"
-  },
-  "com.tencent.qqlite": {
-    "MANUFACTURER": "Xiaomi",
-    "BRAND": "Xiaomi",
-    "MODEL": "23046RP50C"
   },
   "com.tencent.tmgp.cf": {
     "MANUFACTURER": "NUBIA",
@@ -415,18 +347,6 @@
     "MODEL": "PLK110",
     "DEVICE": "PLK110",
     "PRODUCT": "PLK110"
-  },
-  "com.tencent.tmgp.supercell.clashofclans": {
-    "MANUFACTURER": "OnePlus",
-    "BRAND": "OnePlus",
-    "MODEL": "PLK110",
-    "DEVICE": "PLK110",
-    "PRODUCT": "PLK110"
-  },
-  "com.tencent.mobileqq": {
-    "MANUFACTURER": "Xiaomi",
-    "BRAND": "Xiaomi",
-    "MODEL": "23046RP50C"
   },
   "com.vng.codmvn": {
     "MANUFACTURER": "OnePlus",
