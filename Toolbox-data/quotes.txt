@@ -1,4 +1,4 @@
-Keybox Soft-banned
+Keybox OK
 BASIC:  ✅
 DEVICE: ✅
-STRONG: ❌
+STRONG: ✅
